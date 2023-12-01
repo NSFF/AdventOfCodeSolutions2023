@@ -23,5 +23,5 @@ class RegexUtils():
 
         for word in word_lst:
             regex_words = regex_words + "|" + word
-        regex_words = extra_regex_prefix + regex_words + "|"
+        regex_words = "(?=(" + extra_regex_prefix + regex_words + "))"
         return regex_words
